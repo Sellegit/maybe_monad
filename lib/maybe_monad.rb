@@ -23,11 +23,11 @@ module MaybeMonad
     end 
 
     def method_missing(name, *args) 
-      # not send to nil 
-      # @just.nil? ? Monad.new(nil) : Monad.new(@just.__send__(name, *args)) 
+      # default, nil don't respond to any method
+      @just.nil? ? Monad.new(nil) : Monad.new(@just.__send__(name, *args)) 
 
-      #send to whoever responding to  
-      @just.respond_to?(name) ? Monad.new(@just.__send__(name, *args)) : Monad.new(nil) 
+      ## extra, nil respond to methods that can respond
+      #@just.respond_to?(name) ? Monad.new(@just.__send__(name, *args)) : Monad.new(nil) 
     end 
 
   end 
