@@ -2,8 +2,6 @@
 
 Another maybe monad library for ruby.
 
-![maybe_monad][]
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -30,4 +28,3 @@ TODO: Write usage instructions here
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
-[maybe_monad]: maybe_monad.png
